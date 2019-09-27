@@ -899,7 +899,7 @@ function enableMidi() {
     num = 0;
 
     while((num < 1 || num > taille) && i < 1) {
-      numStr = window.prompt("Write the number of the desired MIDI input device:\n\n"+liste);
+      numStr = window.prompt("Write the number of the desired MIDI synchronization input:\n\n"+liste);
       if(numStr == null)
       {
         num = 0;
@@ -1016,7 +1016,7 @@ function handleContinue(e) {
 }
 
 function handleSongposition(e) {
-  console.log('songposition: ',128*e.data[2]+e.data[1]);
+  //console.log('songposition: ',128*e.data[2]+e.data[1]);
   if(progression) {
     var spp = 128*e.data[2]+e.data[1];
     var tic = 0;
