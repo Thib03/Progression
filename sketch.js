@@ -361,7 +361,7 @@ class Chord {
       }
     }
     console.log('scale not found: '+name);
-    this.setScale('major');
+    this.setScale('ionian');
   }
 
   changeScale(up=true) {
