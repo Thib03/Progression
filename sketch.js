@@ -302,7 +302,7 @@ class Chord {
         						break;
       case 'm'    : this.newNote(3,-1);
         						this.newNote(5);
-                    this.setScale('natural minor');
+                    this.setScale('aeolian');
         						break;
       case 'm6'   : this.newNote(3,-1);
         						this.newNote(5);
@@ -582,7 +582,7 @@ class Progression {
     textSize(w0/20);
     textAlign(CENTER,TOP);
     text(this.name,x0,y0,w0,2*h);
-    textSize(w0/30);
+    textSize(w0/32);
     textAlign(LEFT,CENTER);
     var cho = 0;
     var dur = 0;
