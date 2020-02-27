@@ -785,7 +785,7 @@ function handleFile(file) {
     console.log('OS non reconnue');
   }
   for(var l = 0; l < standardFile.length; l++) {
-    standardFile[l] = standardFile[l].slice(0,standardFile[l].length-1);
+    standardFile[l] = standardFile[l].slice(0,standardFile[l].length);
   }
   progression = new Progression(standardFile);
   fileInput.hide();
