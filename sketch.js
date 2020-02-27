@@ -774,7 +774,16 @@ function drawMidiButton() {
 }
 
 function handleFile(file) {
-  var standardFile = file.data.split('\n');
+  var standardFile = '';
+  if(navigator.appVersion.search('Windows') >= 0) {
+    standardFile = file.data.split('\r\n');
+  }
+  else if(navigator.appVersion.search('Mac') >= 0) {
+    standardFile = file.data.split('\n');
+  }
+  else {
+    console.log('OS non reconnue');
+  }
   for(var l = 0; l < standardFile.length; l++) {
     standardFile[l] = standardFile[l].slice(0,standardFile[l].length-1);
   }
