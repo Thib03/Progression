@@ -554,7 +554,6 @@ class Progression {
       for(var c = 0; c < line.length;) {
         var s = c;
         while(line[s] != '-' && s < line.length) {
-          console.log(line[s]);
           s++;
         }
         this.chords.push(new Chord(line.substring(c,s)));
