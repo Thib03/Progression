@@ -542,6 +542,8 @@ class Scale {
   }
 }
 
+var variable = 0;
+
 class Progression {
   constructor(standard) {
     this.name = standard[0];
@@ -552,6 +554,7 @@ class Progression {
       for(var c = 0; c < line.length;) {
         var s = c;
         while(line[s] != '-' && s < line.length) {
+          console.log(line[s]);
           s++;
         }
         this.chords.push(new Chord(line.substring(c,s)));
@@ -777,9 +780,10 @@ function handleFile(file) {
   var standardFile = '';
   if(navigator.appVersion.search('Windows') >= 0) {
     standardFile = file.data.split('\r\n');
+    // c'est juste ou bien ?
   }
   else if(navigator.appVersion.search('Mac') >= 0) {
-    standardFile = file.data.split('\n');
+    standardFile = file.data.split('\r\n');
   }
   else {
     console.log('OS non reconnue');
